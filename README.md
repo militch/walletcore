@@ -17,6 +17,15 @@ Maven:
 
 Gradle:
 ```gradle
+repositories {
+  maven {
+    url = uri("https://maven.pkg.github.com/militch/walletcore")
+    credentials {
+        username = "<your_username>"
+        password = "<your_github_token>"
+    }
+  }
+}
 dependencies {
   implementation 'com.github.militch.walletcore:walletcorej:1.0.0'
 }
