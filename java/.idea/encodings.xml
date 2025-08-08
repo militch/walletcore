@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/build.gradle.kts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/CoinType.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/HDWallet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/NativeLibraryLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/NativeLibraryUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/PlatformUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/PrivateKey.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/PublicKey.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/github/militch/walletj/SystemPropertyUtil.java" charset="UTF-8" />
+  </component>
+</project>
