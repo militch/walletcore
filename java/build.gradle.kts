@@ -1,6 +1,5 @@
 plugins {
     id("java-library")
-    id("maven-publish")
 }
 
 group = "com.github.militch.walletcore"
@@ -8,6 +7,10 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 dependencies {
@@ -63,40 +66,4 @@ tasks.register("copyNativeLibraryToMetaInf", Copy::class) {
 
 tasks.processResources {
     dependsOn("copyNativeLibraryToMetaInf")
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("gpr") {
-            from(components["java"])
-            groupId = group.toString()
-            artifactId = "walletcorej"
-            version = version
-            pom {
-                name.set("数字货币分层确定性钱包库")
-                description.set("")
-                url.set("https://github.com/militch/walletcore")
-            }
-        }
-    }
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/militch/walletcore")
-            credentials {
-                username =  findProperty("gpr.user") as String? ?: ""
-                password =  findProperty("gpr.key") as String? ?: ""
-            }
-        }
-    }
-}
-repositories {
-    maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/militch/walletcore")
-        credentials {
-            username =  findProperty("gpr.user") as String? ?: ""
-            password =  findProperty("gpr.key") as String? ?: ""
-        }
-    }
 }
